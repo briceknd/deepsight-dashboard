@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/bricekonda/deepsight-dashboard/client/scripts/deepsight/controllers/index.js":[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/index.js":[function(require,module,exports){
 'use strict';
 
 module.exports = function (app) {
@@ -7,7 +7,7 @@ module.exports = function (app) {
     // inject:end
 };
 
-},{"./mainView":"/Users/bricekonda/deepsight-dashboard/client/scripts/deepsight/controllers/mainView.js"}],"/Users/bricekonda/deepsight-dashboard/client/scripts/deepsight/controllers/mainView.js":[function(require,module,exports){
+},{"./mainView":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/mainView.js"}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/mainView.js":[function(require,module,exports){
 'use strict';
 
 var controllername = 'mainView';
@@ -22,14 +22,14 @@ module.exports = function (app) {
         var vm = this;
         vm.controllername = fullname;
 
-        console.log('hello brice');
+        console.log('hello brice, deepsight va faire des millions ');
     }
 
     controller.$inject = deps;
     app.controller(fullname, controller);
 };
 
-},{}],"/Users/bricekonda/deepsight-dashboard/client/scripts/deepsight/index.js":[function(require,module,exports){
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/index.js":[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
@@ -63,9 +63,9 @@ module.exports = function (namespace) {
     return app;
 };
 
-},{"./controllers":"/Users/bricekonda/deepsight-dashboard/client/scripts/deepsight/controllers/index.js","./views/home.html":"/Users/bricekonda/deepsight-dashboard/client/scripts/deepsight/views/home.html","angular":"/Users/bricekonda/deepsight-dashboard/node_modules/angular/index.js","angular-ui-router":"/Users/bricekonda/deepsight-dashboard/node_modules/angular-ui-router/release/angular-ui-router.js"}],"/Users/bricekonda/deepsight-dashboard/client/scripts/deepsight/views/home.html":[function(require,module,exports){
+},{"./controllers":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/index.js","./views/home.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/home.html","angular":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular/index.js","angular-ui-router":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular-ui-router/release/angular-ui-router.js"}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/home.html":[function(require,module,exports){
 module.exports = '<div>Hello Brice</div>';
-},{}],"/Users/bricekonda/deepsight-dashboard/client/scripts/main.js":[function(require,module,exports){
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/main.js":[function(require,module,exports){
 'use strict';
 
 var namespace = 'main';
@@ -98,7 +98,7 @@ app.run(run);
 
 module.exports = app;
 
-},{"./deepsight":"/Users/bricekonda/deepsight-dashboard/client/scripts/deepsight/index.js","angular":"/Users/bricekonda/deepsight-dashboard/node_modules/angular/index.js"}],"/Users/bricekonda/deepsight-dashboard/node_modules/angular-ui-router/release/angular-ui-router.js":[function(require,module,exports){
+},{"./deepsight":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/index.js","angular":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular/index.js"}],"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular-ui-router/release/angular-ui-router.js":[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.18
@@ -4638,7 +4638,7 @@ angular.module('ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
-},{}],"/Users/bricekonda/deepsight-dashboard/node_modules/angular/angular.js":[function(require,module,exports){
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular/angular.js":[function(require,module,exports){
 /**
  * @license AngularJS v1.5.8
  * (c) 2010-2016 Google, Inc. http://angularjs.org
@@ -36407,11 +36407,11 @@ $provide.value("$locale", {
 })(window);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],"/Users/bricekonda/deepsight-dashboard/node_modules/angular/index.js":[function(require,module,exports){
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular/index.js":[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":"/Users/bricekonda/deepsight-dashboard/node_modules/angular/angular.js"}],"fs":[function(require,module,exports){
+},{"./angular":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular/angular.js"}],"fs":[function(require,module,exports){
 
-},{}]},{},["/Users/bricekonda/deepsight-dashboard/client/scripts/main.js"])
+},{}]},{},["/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/main.js"])
 //# sourceMappingURL=app-v0.0.1.map.js

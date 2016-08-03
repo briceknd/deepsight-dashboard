@@ -11,7 +11,7 @@ module.exports = function(app) {
         var vm = this;
         vm.controllername = fullname;
 
-        console.log('hello bric');
+        console.log('hello brice, deepsight va faire des millions ');
     }
 
     controller.$inject = deps;
