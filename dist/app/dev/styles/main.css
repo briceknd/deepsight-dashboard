@@ -1,1 +1,95 @@
 
+@font-face {
+  font-family: 'proximanovalight';
+  src: url("../fonts/ProximaNova-Light.otf"); }
+
+@font-face {
+  font-family: 'proximanovaregular';
+  src: url("../fonts/ProximaNova-Regular.otf"); }
+
+@font-face {
+  font-family: 'proximanovasemibold';
+  src: url("../fonts/ProximaNova-Semibold.otf"); }
+
+/*********************************************
+    COLORS
+*********************************************/
+.side-bar-container {
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  left: 0px;
+  top: 0px;
+  background-color: #F0F3F6; }
+
+.centered-picture {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0; }
+
+.logo-picture {
+  height: 80px;
+  width: 80px;
+  margin-top: calc((120px - 80px)/2); }
+
+.side-bar-logo {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  background-color: #76EFFF; }
+
+.side-bar-categories-wrapper {
+  position: absolute;
+  top: 120px;
+  height: calc(100% - 120px);
+  width: 100%;
+  background-color: #1785F3; }
+
+.side-bar-categories-list {
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px; }
+
+.side-bar-categories-list-element {
+  font-family: 'proximanovaregular';
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  display: inline-block;
+  width: calc(100% -  40px); }
+
+.side-bar-categories-list-element:hover {
+  background-color: #007DF3; }
+
+.side-bar-categories-list-element-picto {
+  height: 22px;
+  width: 22px;
+  margin-right: 12px;
+  float: left; }
+
+.side-bar-categories-list-element-text {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: auto; }
+
+.test1, .test2, .test3 {
+  width: calc(100% - 250px);
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  left: 250px;
+  top: 0px; }
+
+.test1 {
+  background-color: blue; }
+
+.test2 {
+  background-color: red; }
+
+.test3 {
+  background-color: yellow; }

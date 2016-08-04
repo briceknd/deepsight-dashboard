@@ -22,6 +22,21 @@ module.exports = function(namespace) {
             template: require('./views/home.html'),
             controller: fullname + '.mainView',
             controllerAs: 'vm'
+        }).state('createaudience', {
+            url: '/createaudience',
+            template: require('./views/createAudience.html'),
+            controller: fullname + '.createAudience',
+            controllerAs: 'vm'
+        }).state('manageaudience', {
+            url: '/manageaudience',
+            template: require('./views/manageAudience.html'),
+            controller: fullname + '.manageAudience',
+            controllerAs: 'vm'
+        }).state('mydata', {
+            url: '/mydata',
+            template: require('./views/myData.html'),
+            controller: fullname + '.myData',
+            controllerAs: 'vm'
         });
     };
     configRoutes.$inject = configRoutesDeps;

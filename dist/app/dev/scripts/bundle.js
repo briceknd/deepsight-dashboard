@@ -1,13 +1,39 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/index.js":[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/createAudience.js":[function(require,module,exports){
+'use strict';
+
+var controllername = 'createAudience';
+
+module.exports = function (app) {
+    var fullname = app.name + '.' + controllername;
+    /*jshint validthis: true */
+
+    var deps = [];
+
+    function controller() {
+        var vm = this;
+        vm.controllername = fullname;
+
+        var activate = function activate() {};
+        activate();
+    }
+
+    controller.$inject = deps;
+    app.controller(fullname, controller);
+};
+
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/index.js":[function(require,module,exports){
 'use strict';
 
 module.exports = function (app) {
     // inject:start
+    require('./createAudience')(app);
     require('./mainView')(app);
+    require('./manageAudience')(app);
+    require('./myData')(app);
     // inject:end
 };
 
-},{"./mainView":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/mainView.js"}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/mainView.js":[function(require,module,exports){
+},{"./createAudience":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/createAudience.js","./mainView":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/mainView.js","./manageAudience":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/manageAudience.js","./myData":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/myData.js"}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/mainView.js":[function(require,module,exports){
 'use strict';
 
 var controllername = 'mainView';
@@ -23,6 +49,52 @@ module.exports = function (app) {
         vm.controllername = fullname;
 
         console.log('hello brice, deepsight va faire des millions ');
+    }
+
+    controller.$inject = deps;
+    app.controller(fullname, controller);
+};
+
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/manageAudience.js":[function(require,module,exports){
+'use strict';
+
+var controllername = 'manageAudience';
+
+module.exports = function (app) {
+    var fullname = app.name + '.' + controllername;
+    /*jshint validthis: true */
+
+    var deps = [];
+
+    function controller() {
+        var vm = this;
+        vm.controllername = fullname;
+
+        var activate = function activate() {};
+        activate();
+    }
+
+    controller.$inject = deps;
+    app.controller(fullname, controller);
+};
+
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/myData.js":[function(require,module,exports){
+'use strict';
+
+var controllername = 'myData';
+
+module.exports = function (app) {
+    var fullname = app.name + '.' + controllername;
+    /*jshint validthis: true */
+
+    var deps = [];
+
+    function controller() {
+        var vm = this;
+        vm.controllername = fullname;
+
+        var activate = function activate() {};
+        activate();
     }
 
     controller.$inject = deps;
@@ -55,6 +127,21 @@ module.exports = function (namespace) {
             template: require('./views/home.html'),
             controller: fullname + '.mainView',
             controllerAs: 'vm'
+        }).state('createaudience', {
+            url: '/createaudience',
+            template: require('./views/createAudience.html'),
+            controller: fullname + '.createAudience',
+            controllerAs: 'vm'
+        }).state('manageaudience', {
+            url: '/manageaudience',
+            template: require('./views/manageAudience.html'),
+            controller: fullname + '.manageAudience',
+            controllerAs: 'vm'
+        }).state('mydata', {
+            url: '/mydata',
+            template: require('./views/myData.html'),
+            controller: fullname + '.myData',
+            controllerAs: 'vm'
         });
     };
     configRoutes.$inject = configRoutesDeps;
@@ -63,8 +150,14 @@ module.exports = function (namespace) {
     return app;
 };
 
-},{"./controllers":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/index.js","./views/home.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/home.html","angular":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular/index.js","angular-ui-router":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular-ui-router/release/angular-ui-router.js"}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/home.html":[function(require,module,exports){
-module.exports = '<div>Hello Brice</div>';
+},{"./controllers":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/index.js","./views/createAudience.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/createAudience.html","./views/home.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/home.html","./views/manageAudience.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/manageAudience.html","./views/myData.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/myData.html","angular":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular/index.js","angular-ui-router":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular-ui-router/release/angular-ui-router.js"}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/createAudience.html":[function(require,module,exports){
+module.exports = '<div class="test3"></div>';
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/home.html":[function(require,module,exports){
+module.exports = '';
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/manageAudience.html":[function(require,module,exports){
+module.exports = '<div class="test1"></div>';
+},{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/myData.html":[function(require,module,exports){
+module.exports = '<div class="test2"></div>';
 },{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/main.js":[function(require,module,exports){
 'use strict';
 
