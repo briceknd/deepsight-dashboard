@@ -16,23 +16,23 @@ module.exports = function(namespace) {
 
     var configRoutesDeps = ['$stateProvider', '$urlRouterProvider'];
     var configRoutes = function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/home');
         $stateProvider.state('home', {
-            url: '/',
+            url: '/home',
             template: require('./views/home.html'),
             controller: fullname + '.mainView',
             controllerAs: 'vm'
-        }).state('createaudience', {
+        }).state('home.createaudience', {
             url: '/createaudience',
             template: require('./views/createAudience.html'),
             controller: fullname + '.createAudience',
             controllerAs: 'vm'
-        }).state('manageaudience', {
+        }).state('home.manageaudience', {
             url: '/manageaudience',
             template: require('./views/manageAudience.html'),
             controller: fullname + '.manageAudience',
             controllerAs: 'vm'
-        }).state('mydata', {
+        }).state('home.mydata', {
             url: '/mydata',
             template: require('./views/myData.html'),
             controller: fullname + '.myData',

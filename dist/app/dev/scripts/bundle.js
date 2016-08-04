@@ -13,8 +13,7 @@ module.exports = function (app) {
         var vm = this;
         vm.controllername = fullname;
 
-        var activate = function activate() {};
-        activate();
+        console.log("test create audience");
     }
 
     controller.$inject = deps;
@@ -70,8 +69,7 @@ module.exports = function (app) {
         var vm = this;
         vm.controllername = fullname;
 
-        var activate = function activate() {};
-        activate();
+        console.log("test manage audience");
     }
 
     controller.$inject = deps;
@@ -93,8 +91,7 @@ module.exports = function (app) {
         var vm = this;
         vm.controllername = fullname;
 
-        var activate = function activate() {};
-        activate();
+        console.log("test mydata");
     }
 
     controller.$inject = deps;
@@ -121,23 +118,23 @@ module.exports = function (namespace) {
 
     var configRoutesDeps = ['$stateProvider', '$urlRouterProvider'];
     var configRoutes = function configRoutes($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/home');
         $stateProvider.state('home', {
-            url: '/',
+            url: '/home',
             template: require('./views/home.html'),
             controller: fullname + '.mainView',
             controllerAs: 'vm'
-        }).state('createaudience', {
+        }).state('home.createaudience', {
             url: '/createaudience',
             template: require('./views/createAudience.html'),
             controller: fullname + '.createAudience',
             controllerAs: 'vm'
-        }).state('manageaudience', {
+        }).state('home.manageaudience', {
             url: '/manageaudience',
             template: require('./views/manageAudience.html'),
             controller: fullname + '.manageAudience',
             controllerAs: 'vm'
-        }).state('mydata', {
+        }).state('home.mydata', {
             url: '/mydata',
             template: require('./views/myData.html'),
             controller: fullname + '.myData',
@@ -153,7 +150,18 @@ module.exports = function (namespace) {
 },{"./controllers":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/controllers/index.js","./views/createAudience.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/createAudience.html","./views/home.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/home.html","./views/manageAudience.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/manageAudience.html","./views/myData.html":"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/myData.html","angular":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular/index.js","angular-ui-router":"/Users/bricekonda/Desktop/deepsight-dashboard/node_modules/angular-ui-router/release/angular-ui-router.js"}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/createAudience.html":[function(require,module,exports){
 module.exports = '<div class="test3"></div>';
 },{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/home.html":[function(require,module,exports){
-module.exports = '';
+module.exports = '<div class="side-bar-container">\n' +
+    '    <div class="side-bar-logo">\n' +
+    '        <img class="centered-picture logo-picture" src="../images/logo.png">\n' +
+    '    </div>\n' +
+    '    <div class="side-bar-categories-wrapper">\n' +
+    '        <ul class="side-bar-categories-list">\n' +
+    '            <li class="side-bar-categories-list-element"><div class="side-bar-categories-list-element-picto-wrapper"><img class="side-bar-categories-list-element-picto" src="./images/crea-picto.png"></div><div class="side-bar-categories-list-element-text"><a href="/createaudience">CREATION DE SEGMENTS</a></div></li>\n' +
+    '            <li class="side-bar-categories-list-element"><img class="side-bar-categories-list-element-picto" src="../images/audience-picto.png"><div class="side-bar-categories-list-element-text"><a ui-sref=".manageaudience">MES AUDIENCES</a></div></li>\n' +
+    '            <li class="side-bar-categories-list-element"><img class="side-bar-categories-list-element-picto" src="../images/data-picto.png"><div class="side-bar-categories-list-element-text"><a ui-sref=".mydata">MES DATAS</a></div></li>\n' +
+    '        </ul>\n' +
+    '    </div>\n' +
+    '</div>';
 },{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/manageAudience.html":[function(require,module,exports){
 module.exports = '<div class="test1"></div>';
 },{}],"/Users/bricekonda/Desktop/deepsight-dashboard/client/scripts/deepsight/views/myData.html":[function(require,module,exports){

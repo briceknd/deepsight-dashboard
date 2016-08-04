@@ -11,10 +11,7 @@ module.exports = function(app) {
         var vm = this;
         vm.controllername = fullname;
 
-        var activate = function() {
-
-        };
-        activate();
+        console.log("test mydata");
     }
 
     controller.$inject = deps;
